@@ -85,7 +85,6 @@
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-core</artifactId>
-            <scope>test</scope>
         </dependency>
 
         <dependency>
