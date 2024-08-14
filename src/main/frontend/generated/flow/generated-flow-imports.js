@@ -4,9 +4,6 @@ import { css, unsafeCSS, registerStyles } from '@vaadin/vaadin-themable-mixin';
 import $cssFromFile_0 from 'Frontend/generated/jar-resources/styles/vaadin-checkbox.css?inline';
 
 injectGlobalCss($cssFromFile_0.toString(), 'CSSImport end', document);
-import $cssFromFile_1 from 'Frontend/generated/jar-resources/clock-element.css?inline';
-
-injectGlobalCss($cssFromFile_1.toString(), 'CSSImport end', document);
 import '@vaadin/polymer-legacy-adapter/style-modules.js';
 import '@vaadin/checkbox/theme/lumo/vaadin-checkbox.js';
 import '@vaadin/common-frontend/ConnectionIndicator.js';
@@ -94,7 +91,6 @@ import '@vaadin/vaadin-lumo-styles/spacing.js';
 import '@vaadin/vaadin-lumo-styles/style.js';
 import '@vaadin/vaadin-lumo-styles/vaadin-iconset.js';
 import 'Frontend/generated/jar-resources/audio-element.ts';
-import 'Frontend/generated/jar-resources/clock-element.ts';
 const loadOnDemand = (key) => { return Promise.resolve(0); }
 window.Vaadin = window.Vaadin || {};
 window.Vaadin.Flow = window.Vaadin.Flow || {};

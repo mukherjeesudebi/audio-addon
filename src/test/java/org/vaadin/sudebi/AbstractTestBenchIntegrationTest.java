@@ -1,4 +1,4 @@
-package org.vaadin.addons.sample;
+package org.vaadin.sudebi;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;
