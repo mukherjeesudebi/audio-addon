@@ -159,7 +159,7 @@ export class AudioElement extends LitElement {
 		<vaadin-button theme="tertiary" id="startButton" @click="${this.startRecording}">
 			<vaadin-icon icon="vaadin:microphone"></vaadin-icon>
 		</vaadin-button>
-		<vaadin-button theme="tertiary" id="stopButton" style="color: red" @click="${this.stopRecording}" class="hide-visibility">
+		<vaadin-button theme="tertiary" id="stopButton" style="color: red" @click="${this.stopRecording}">
 			<vaadin-icon icon="vaadin:stop"></vaadin-icon>
 		</vaadin-button>	
 	<audio id="preview" width="160" height="120" autoplay muted></audio>
