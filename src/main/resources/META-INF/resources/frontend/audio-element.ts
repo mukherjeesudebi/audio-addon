@@ -39,17 +39,17 @@ export class AudioElement extends LitElement {
 		return Promise.all([stopped, this.recorded]).then(() => data);
 	}
 
-	async createVisualizer(stream) {
-		var WIDTH = 300;
-		var HEIGHT = 53;
-		var audioContext = new AudioContext();
-		var analyserNode = audioContext.createAnalyser();
-		var source = audioContext.createMediaStreamSource(stream);
+	createVisualizer(stream) {
+		let WIDTH = 300;
+		let HEIGHT = 53;
+		let audioContext = new AudioContext();
+		let analyserNode = audioContext.createAnalyser();
+		let source = audioContext.createMediaStreamSource(stream);
 		source.connect(analyserNode);
 		analyserNode.fftSize = 2048;
-		var bufferLength = analyserNode.frequencyBinCount;
-		var dataArray = new Uint8Array(bufferLength);
-		var canvasCtx = this._visualizer.getContext("2d");
+		let bufferLength = analyserNode.frequencyBinCount;
+		let dataArray = new Uint8Array(bufferLength);
+		let canvasCtx = this._visualizer.getContext("2d");
 		canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
 
 		const draw = () => {
@@ -60,11 +60,11 @@ export class AudioElement extends LitElement {
 			canvasCtx.fillStyle = "rgb(255, 255, 255)";
 			canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
-			const barWidth = (WIDTH / bufferLength) * 2.5;
+			let barWidth = (WIDTH / bufferLength) * 2.5;
 			let x = 0;
 
 			for (let i = 0; i < bufferLength; i++) {
-				const barHeight = dataArray[i];
+				let barHeight = dataArray[i];
 
 				canvasCtx.fillStyle = "rgb(" + (barHeight + 100) + ",50,50)";
 				canvasCtx.fillRect(
@@ -101,7 +101,7 @@ export class AudioElement extends LitElement {
 			}).then(() => this.record(this._preview.captureStream(), this.recordingTimeMS))
 			.then((recordedChunks) => {
 				let recordedBlob = new Blob(recordedChunks, { type: "audio/ogg; codecs=opus" });
-				const audioURL = URL.createObjectURL(recordedBlob)
+				let audioURL = URL.createObjectURL(recordedBlob)
 				this._recording.src = audioURL;
 				this.saveRecordedAudio(recordedBlob);
 			}).catch((error) => {
@@ -113,7 +113,7 @@ export class AudioElement extends LitElement {
 			})
 	}
 
-	async saveRecordedAudio(recordedBlob) {
+	saveRecordedAudio(recordedBlob) {
 		let reader = new FileReader();
 		let base64String;
 		reader.onload = function () {

@@ -34,7 +34,6 @@ public class Audio extends LitTemplate{
     @ClientCallable
     public void saveRecordedAudio(String audio) {
     	setRecordedAudio(audio);
-        System.out.println(getRecordedAudio());
     }
 
 	public String getRecordedAudio() {

@@ -36,3 +36,10 @@ src/main/resources/META-INF/resources/frontend/generated
 src/main/resources/META-INF/resources/frontend/index.html
 /target/
 node_modules
+/.metadata/
+.classpath
+.settings
+.gitigone
+.project
+src/main/bundles
+src/main/frontend
