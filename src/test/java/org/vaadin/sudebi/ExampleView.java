@@ -1,5 +1,7 @@
 package org.vaadin.sudebi;
 
+import org.vaadin.sudebi.Audio;
+
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
