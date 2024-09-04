@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.vaadin.addons.sudebi</groupId>
 	<artifactId>audiorecorder</artifactId>
-	<version>1.0.0</version>
+	<version>1.1.0</version>
 	<name>AudioRecorder</name>
 	<description>Audio recorder component for Vaadin platform</description>
 	<properties>
