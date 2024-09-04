@@ -85,6 +85,8 @@ export class AudioElement extends LitElement {
 	}
 
 	startRecording() {
+		const event = new Event('start', {bubbles: true, composed: true});
+        this.dispatchEvent(event);
 		if (!this._recording.classList.contains("hide-visibility")) {
 			this._recording.classList.add("hide-visibility");
 		}
@@ -134,6 +136,8 @@ export class AudioElement extends LitElement {
 			this.recorded = this.recorder.stop();
 		}
 		this.stop(this._preview.srcObject);
+		const event = new Event('stop', {bubbles: true, composed: true});
+        this.dispatchEvent(event);
 	}
 
 	wait(delayInMS) {

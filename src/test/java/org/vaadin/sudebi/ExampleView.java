@@ -15,5 +15,11 @@ public class ExampleView extends VerticalLayout {
 	public ExampleView() {
 		Audio audio = new Audio();
 		add(audio);
+		audio.addStartListener(event -> {
+			System.out.println("Recording started....");
+		});
+		audio.addStopListener(event -> {
+			System.out.println("Recording stopped.");
+		});
 	}
 }
